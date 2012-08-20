@@ -30,7 +30,7 @@ class zendserver::install {
     }
 
     package { "zend-server-php-${params::php_version}":
-        ensure => "latest",
+        ensure => "installed",
         require	=> Exec["apt_update"]
     }
 }

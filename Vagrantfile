@@ -5,8 +5,9 @@ Vagrant::Config.run do |config|
     # Use :gui for showing a display for easy debugging of vagrant
     config.vm.boot_mode = :gui
 
-    config.vm.define :project do |project_config|
-        project_config.vm.host_name = "vagrant-test.local"
+    # Default dev box
+    config.vm.define :devbox do |project_config|
+        project_config.vm.host_name = "devbox.local"
 
         project_config.vm.network :hostonly, "192.168.65.110"
 
