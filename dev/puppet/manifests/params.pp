@@ -1,6 +1,9 @@
-# /support/puppet/manifests/params.pp
 class params {
-    # Hostname of the virtualbox (make sure this URL points to 127.0.0.1 on your local dev system!)
+
+    # Project name
+    $project = 'testproject'
+
+    # Vhost
     $host = 'www.project.dev'
 
     # Original port (don't change)
@@ -11,7 +14,26 @@ class params {
     $dbuser = 'project'
     $dbpass = 'secret'
 
-    $filepath = '/vagrant/dev/puppet/modules'
-
+    # PHP
     $php_version = '5.3'
+
+    # @todo: PHPMyAdmin
+    $phpmyadmin = true
+
+    # @todo: Memcached
+    $memcached = true
+    $memcached_memory = '64M'
+
+    # @todo: Varnish
+    $varnish = true
+    $varnish_path = ''
+
+    # @todo: SOLR
+    $solr = true
+    $solr_path = ''
+
+
+    # Other settings
+	$timezone = "Europe/Amsterdam"
+    $filepath = '/vagrant/dev/puppet/modules'
 }

@@ -9,11 +9,13 @@ Vagrant::Config.run do |config|
     config.vm.define :devbox do |project_config|
         project_config.vm.host_name = "devbox.local"
 
-        project_config.vm.network :hostonly, "192.168.65.110"
+        project_config.vm.network :hostonly, "192.168.56.110"
 
         # Pass custom arguments to VBoxManage before booting VM
         project_config.vm.customize [
-            'modifyvm', :id, '--chipset', 'ich9', # solves kernel panic issue on some host machines
+            'modifyvm', :id,
+            '--chipset', 'ich9', # solves kernel panic issue on some host machines
+            '--memory', '386', # set memory
         ]
 
         # Pass installation procedure over to Puppet (see `support/puppet/manifests/project.pp`)

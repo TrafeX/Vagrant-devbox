@@ -1,8 +1,6 @@
 class zendserver::install {
 
-    include apache
     include apt
-
     file { "zend-server" :
         path   => "/etc/apt/sources.list.d/zend-server.list",
         source => "${params::filepath}/zendserver/files/zend-server.list",

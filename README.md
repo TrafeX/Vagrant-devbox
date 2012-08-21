@@ -1,9 +1,15 @@
+Vagrant template
+================
+This setup can be used as template for your own Vagrant/Puppet setup.
+
+
 TODO
 ====
 
 * Create /srv/http/<projectname>/
-* Create vhost for project
-* Make zend-server platform-independent
+* Make zend-server distro-independent
+* Mount git repo on vbox
+
 
 Resources
 =========
