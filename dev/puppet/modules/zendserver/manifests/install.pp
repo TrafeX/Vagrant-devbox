@@ -11,6 +11,14 @@ class zendserver::install {
         mode  => 0644,
     }
 
+    file { "zend-path" :
+        path   => "/etc/profile.d/zend.sh",
+        source => "${params::filepath}/zendserver/files/zend.sh",
+        owner  => "root",
+        group  => "root",
+        mode  => 0755,
+    }
+
     exec { "zend_key":
         command => "wget http://repos.zend.com/zend.key -O- |apt-key add -",
         path => [
