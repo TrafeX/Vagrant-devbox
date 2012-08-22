@@ -18,7 +18,8 @@ node default {
         docroot => "/srv/http/${params::project}/hosts/${params::host}/public",
         docroot_create => true,
         docroot_owner => 'vagrant',
-        docroot_group => 'www-data' # @todo: make os-independent
+        docroot_group => 'www-data', # @todo: make os-independent
+        port => $params::apache_port,
     }
 
 }

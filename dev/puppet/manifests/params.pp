@@ -6,10 +6,11 @@ class params {
     # Vhost
     $host = 'www.project.dev'
 
-    # Original port (don't change)
-    $port = '80'
+    # Apache port
+    $apache_port = '80'
 
-    # Database names (must match your app/config/parameters.ini file)
+    # Database
+    $mysql = true
     $dbname = 'project'
     $dbuser = 'project'
     $dbpass = 'secret'
@@ -20,20 +21,22 @@ class params {
     # @todo: PHPMyAdmin
     $phpmyadmin = true
 
-    # @todo: Memcached
+    # Memcached
     $memcached = true
     $memcached_memory = '64M'
 
-    # @todo: Varnish
+    # Varnish
+    # @todo: We want the latest version
     $varnish = true
-    $varnish_path = ''
+    $varnish_port = 6081
+    $varnish_backendport = 80 # Apache port
+    $varnish_path = '/vagrant/dev/varnish'
 
     # @todo: SOLR
-    $solr = true
+    $solr = false
     $solr_path = ''
 
-
     # Other settings
-	$timezone = "Europe/Amsterdam"
+    $timezone = 'Europe/Amsterdam'
     $filepath = '/vagrant/dev/puppet/modules'
 }

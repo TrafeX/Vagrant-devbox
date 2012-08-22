@@ -1,15 +1,21 @@
 Vagrant template
 ================
-This setup can be used as template for your own Vagrant/Puppet setup.
+This Vagrant/Puppet template gives you a VirtualBox Machine with:
+
+* Zend Server
+* MySQL
+* Vhost for your project
+* Memcached
+* Varnish
+* Solr (soon)
+
+These services can be easily configured with the params file.
 
 
 TODO
 ====
-
-* Create /srv/http/<projectname>/
-* Make zend-server distro-independent
-* Mount git repo on vbox
-
+* Make distro-independent
+* Easily configure the amount of memory memcached can use
 
 Resources
 =========
