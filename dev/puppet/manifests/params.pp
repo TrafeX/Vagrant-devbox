@@ -11,9 +11,6 @@ class params {
 
     # Database
     $mysql = true
-    $dbname = 'project'
-    $dbuser = 'project'
-    $dbpass = 'secret'
 
     # PHP
     $php_version = '5.3'

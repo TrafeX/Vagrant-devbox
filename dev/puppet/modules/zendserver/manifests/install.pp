@@ -15,10 +15,14 @@ class zendserver::install {
         source => "${params::filepath}/zendserver/files/zend.sh",
         owner  => "root",
         group  => "root",
-        mode  => 0755,
+        mode   => 0755,
     }
 
     package { "zend-server-php-${params::php_version}":
         ensure => present,
+        require => [
+            Apt::Repository["zend-server"],
+            File["zend-path"],
+        ],
     }
 }

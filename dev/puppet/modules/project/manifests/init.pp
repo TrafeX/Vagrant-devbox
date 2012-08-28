@@ -14,15 +14,7 @@ class project {
         $varnish_backendport = $params::varnish_backendport
 
         include varnish
-
-        # @todo add START=yes to /etc/default/varnish
-
-        file { "/etc/varnish":
-            ensure => link,
-            target => $params::varnish_path,
-            notify => Service['varnish'],
-            force => true, # needed because the default folder exists
-       }
+        include project::varnishconf
     }
     if $params::solr {
         class { "solr": }
