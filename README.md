@@ -11,6 +11,13 @@ This Vagrant/Puppet template gives you a VirtualBox Machine with:
 
 These services can be easily configured with the params file.
 
+Install
+=======
+
+* Install vagrant
+* Clone this repo
+* Run `git submodule update --init --recursive` to update all submodules
+* Run `vagrant up`
 
 TODO
 ====

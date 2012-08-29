@@ -22,7 +22,7 @@ Vagrant::Config.run do |config|
         project_config.vm.provision :puppet do |puppet|
             puppet.manifests_path = "dev/puppet/manifests"
             puppet.module_path = "dev/puppet/modules"
-            puppet.manifest_file = "project.pp"
+            puppet.manifest_file = "basenode.pp"
             puppet.options = [
                 '--verbose',
                 '--debug',
