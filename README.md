@@ -30,3 +30,7 @@ I've based this setup on the following resources:
 
 * https://github.com/NoStressCommerceCZ/virtualdev
 * http://www.adayinthelifeof.nl/2012/06/29/using-vagrant-and-puppet-to-setup-your-symfony2-environment/
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/TrafeX/vagrant-devbox/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
